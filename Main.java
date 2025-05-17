@@ -10,18 +10,18 @@ public class Main {
       System.out.println("\n1. Add Transaction");
       System.out.println("2. Undo Last Transaction");
       System.out.println("3. View Summary");
-      System.out.println("4. View History")
+      System.out.println("4. View History");
       System.out.println("5. Exit");
       System.out.print("Select option: ");
 
       int choice = scanner.nextInt();
       scanner.nextLine();
 
-      switch (choice0 {
+      switch (choice) {
         case 1:
-          System.out.print("Enter type (income/expense): ";
+          System.out.print("Enter type (income/expense): ");
           String type = scanner.nextLine();
-          System.out.print("Enter category (Food, Rent, Entertainment): ";
+          System.out.print("Enter category (Food, Rent, Entertainment): ");
           String category = scanner.nextLine();
           System.out.print("Enter amount: ");
           double amount = scanner.nextDouble();
