@@ -4,7 +4,7 @@ import java.util.Stack;
 
 public class FinanceManager {
     private ArrayList<Transaction> history; // this will store all transactions
-    private Stack<Transaction> undoStacl; //this will allow the ability to undo the previous transaction
+    private Stack<Transaction> undoStack; //this will allow the ability to undo the previous transaction
     private HashMap<String, Double> categoryTotals; // this will store totals by category
 
     public FinanceManager() {
@@ -15,7 +15,7 @@ public class FinanceManager {
 
 public void addTransaction(Transaction t) {
     history.add(t);
-    undo.stack.push(t);
+    undoStack.push(t);
 
     String category = t.getCategory();
     double amount = t.getAmount();
@@ -23,7 +23,7 @@ public void addTransaction(Transaction t) {
     if (t.getType().equalsIgnoreCase("income")) {
         categoryTotals.put(category, categoryTotals.getOrDefault(category, 0.0) + amount);
     } else if (t.getType().equalsIgnoreCase("expense")) {
-        categoryTotals.put(category, categoryTotals.getOrDefault(category, 0.0) - amount(;
+        categoryTotals.put(category, categoryTotals.getOrDefault(category, 0.0) - amount);
     } //had some help from ChatGpt to assist me with this section of the code
 }
 
